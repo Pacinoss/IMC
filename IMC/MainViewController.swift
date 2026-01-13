@@ -18,9 +18,11 @@ class MainViewController: UIViewController {
     //estan en outlet es una refencia al boton entero  es para cambiarle el color etc.
     
 
+    @IBOutlet weak var resultadoTexto: UILabel!
     
     var peso:Float = 60.0
     var altura:Float = 170.0
+    var resultadotexto = ""
     
     override func viewDidLoad() {// view did load catrg LA VISTA
         super.viewDidLoad()
@@ -43,10 +45,15 @@ class MainViewController: UIViewController {
         print ("haz pulsado el boton comprobar")//esto lo muestra en el "logcat"
         let alturaenMetros:Float = altura / 100.0
         let imc = altura / powf(alturaenMetros,2)// las variables no se empizan con mayus
-        resultLabel.text = String(format: "Tu IMC es: %.2f", imc)
+        if peso > 95.0 && alturaenMetros < 1.50{
+            resultadoTexto.text = "Tienes obesidad"
+            resultLabel.text = String(format: "Tu IMC es: %.2f", imc)
+        }
+        else {
+            resultadotexto.text = "no tienes nada"
+        }
 
-
-        
+ 
     }
 }
 
