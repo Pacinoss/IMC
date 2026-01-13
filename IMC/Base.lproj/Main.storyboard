@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whE-Tx-YaU">
-                                        <rect key="frame" x="146" y="388" width="149" height="65"/>
+                                        <rect key="frame" x="146" y="334" width="149" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Comprobar IMC">
@@ -69,13 +69,6 @@
                                             <action selector="CambioAltura:" destination="BYZ-38-t0r" eventType="valueChanged" id="pSq-GQ-1ic"/>
                                         </connections>
                                     </stepper>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡¡¡Tienes que bajar!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNE-RC-64R">
-                                        <rect key="frame" x="87" y="333" width="271" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60 kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fq7-yM-vEi">
                                         <rect key="frame" x="179" y="87" width="83" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,8 +102,6 @@
                         <outlet property="PasoaPaso" destination="t8f-6h-iVZ" id="VIV-yi-PR1"/>
                         <outlet property="Peso" destination="Fq7-yM-vEi" id="sJj-5j-LZo"/>
                         <outlet property="Slider" destination="gwZ-1w-mW1" id="cda-5d-XJ0"/>
-                        <outlet property="TextHappyFat" destination="xNE-RC-64R" id="VTd-VQ-G7n"/>
-                        <outlet property="Texto_visible" destination="xNE-RC-64R" id="eg0-QE-dgp"/>
                         <outlet property="resultLabel" destination="drr-HR-XO3" id="qsi-x6-YON"/>
                     </connections>
                 </viewController>

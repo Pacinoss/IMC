@@ -15,14 +15,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var Peso: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var PasoaPaso: UIStepper!
-    @IBOutlet weak var Texto_visible: UILabel!
     //estan en outlet es una refencia al boton entero  es para cambiarle el color etc.
     
 
     
     var peso:Float = 60.0
     var altura:Float = 170.0
-    var resultado:String = ""
     
     override func viewDidLoad() {// view did load catrg LA VISTA
         super.viewDidLoad()
@@ -47,7 +45,7 @@ class MainViewController: UIViewController {
         let imc = altura / powf(alturaenMetros,2)// las variables no se empizan con mayus
         resultLabel.text = String(format: "Tu IMC es: %.2f", imc)
 
-  
+
         
     }
 }
