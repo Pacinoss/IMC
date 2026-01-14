@@ -15,14 +15,15 @@ class MainViewController: UIViewController {
     @IBOutlet weak var Peso: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var PasoaPaso: UIStepper!
+    @IBOutlet weak var resultadoIMC: UILabel!
     //estan en outlet es una refencia al boton entero  es para cambiarle el color etc.
     
 
-    @IBOutlet weak var resultadoTexto: UILabel!
+
     
     var peso:Float = 60.0
     var altura:Float = 170.0
-    var resultadotexto = ""
+    // var resultadotexto: String = ""
     
     override func viewDidLoad() {// view did load catrg LA VISTA
         super.viewDidLoad()
@@ -42,18 +43,39 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func ComprobarIMC(_ sender: Any) {// es de tipo action
-        print ("haz pulsado el boton comprobar")//esto lo muestra en el "logcat"
+        // print ("haz pulsado el boton comprobar")//esto lo muestra en el "logcat"
         let alturaenMetros:Float = altura / 100.0
-        let imc = altura / powf(alturaenMetros,2)// las variables no se empizan con mayus
-        if peso > 95.0 && alturaenMetros < 1.50{
-            resultadoTexto.text = "Tienes obesidad"
-            resultLabel.text = String(format: "Tu IMC es: %.2f", imc)
+        let imc = peso / alturaenMetros * alturaenMetros
+        //   let imc = altura / powf(alturaenMetros,2)// las variables no se empizan con mayus
+        
+        resultLabel.text = String(format: "Tu IMC es: %.2f", imc)
+        var resultadotext = ""
+        var resultadoColor = UIColor.black
+        switch imc {
+        case 0..<18.5:
+            resultadotext = "Estas hecho un hueso"
+            resultadoColor = UIColor.imcBajopeso
+            //este es otro ejemlo de como lo podemos hacer de otra manera mas agil
+            
+        case 18.5..<25:
+            resultadoIMC.text = "Peso Perfecto"
+            resultLabel.textColor = UIColor.imcPesonormal
+        case 30..<35:
+            resultadoIMC.text = "Estas un poco Sobrepesado"
+            resultLabel.textColor = UIColor.imcSobrepeso
+            resultadoIMC.textColor = UIColor.imcSobrepeso
+        case 35..<40:
+            resultadoIMC.text = "Estas con Obesidad"
+            resultLabel.textColor = UIColor.imcObeso
+            resultadoIMC.textColor = UIColor.imcObeso
+            
+        default:
+            resultadoIMC.text = resultadotext
+            resultLabel.textColor = resultadoColor
+            resultadoIMC.textColor = resultadoColor
         }
-        else {
-            resultadotexto.text = "no tienes nada"
-        }
-
- 
     }
+
+    
 }
 
