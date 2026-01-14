@@ -87,7 +87,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                         <connections>
                                             <action selector="CambioAltura:" destination="BYZ-38-t0r" eventType="valueChanged" id="pSq-GQ-1ic"/>
-                                            <action selector="cambioAltura:" destination="BYZ-38-t0r" eventType="valueChanged" id="awm-Sg-y9a"/>
                                         </connections>
                                     </stepper>
                                 </subviews>
